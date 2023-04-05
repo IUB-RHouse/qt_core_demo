@@ -192,6 +192,7 @@ if __name__ == '__main__':
             break     
                   
     rospy.loginfo("finished!")
+    exit()
     
     try:
         rospy.spin()
