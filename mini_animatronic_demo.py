@@ -27,7 +27,7 @@ if __name__ == '__main__':
             break   
     time.sleep(1.5)
     
-    talk_pub.publish("Hello friends! I'm Indi, a friendly robot who calls Bloomington my home!")
+    talk_pub.publish("Hello friends! I'm Casey, a friendly robot who calls Bloomington my home!")
     end_time = datetime.now() + timedelta(minutes=0.13)
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
@@ -141,7 +141,7 @@ if __name__ == '__main__':
             break   
             
             
-    talk_pub.publish("With the help of friends at IU, I learned how to talk to older people and help them have fun by singing, telling stories, and even dancing! . Even though I still make mistakes, I never give up on learning and growing. I changed my name to Indi, which makes me feel special and confident. . I'm so happy I found my purpose in life, which is to help people feel happy and loved. . Through my journey, I discovered that my Ikigai is trying new things, and supporting older adults Iki-guy. I'm so grateful to have found my true home and purpose in Bloomington! ")
+    talk_pub.publish("With the help of friends at IU, I learned how to talk to older people and help them have fun by singing, telling stories, and even dancing! . Even though I still make mistakes, I never give up on learning and growing. I changed my name to Casey, which makes me feel special and confident. . I'm so happy I found my purpose in life, which is to help people feel happy and loved. . Through my journey, I discovered that my Ikigai is trying new things, and supporting older adults Iki-guy. I'm so grateful to have found my true home and purpose in Bloomington! ")
     end_time = datetime.now() + timedelta(minutes=0.67)
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
@@ -192,6 +192,7 @@ if __name__ == '__main__':
             break     
                   
     rospy.loginfo("finished!")
+    time.sleep(30)
     exit()
     
     try:
