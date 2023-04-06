@@ -15,8 +15,8 @@ if __name__ == '__main__':
     talk_pub = rospy.Publisher('/qt_robot/behavior/talkText', String, queue_size=10)
     gesture_play = rospy.Publisher('/qt_robot/gesture/play', String, queue_size=10)
     emotion_show = rospy.Publisher('/qt_robot/emotion/show', String, queue_size=10)
-    rospy.sleep(3.0)
-    
+    audio_play = rospy.Publisher('/qt_robot/audio/play', String, queue_size=10)
+    rospy.sleep(1.0)
     
     emotion_show.publish("QT/happy")
     end_time = datetime.now() + timedelta(minutes=0.1)
@@ -25,7 +25,31 @@ if __name__ == '__main__':
         current_time = datetime.now()
         if current_time > end_time:
             break   
-    time.sleep(1.5)
+    #time.sleep(1.5)
+    
+    end_time = datetime.now() + timedelta(minutes=0.08)
+    while True:
+        gesture_list = [gesture_play.publish("disney/disney_001"),
+            gesture_play.publish("disney/disney_002"),
+            gesture_play.publish("disney/disney_003"),
+            gesture_play.publish("disney/disney_004"),
+            gesture_play.publish("disney/disney_005"),
+            gesture_play.publish("disney/disney_006"),
+            gesture_play.publish("disney/disney_007"),
+            gesture_play.publish("disney/disney_008"),
+            gesture_play.publish("disney/disney_009"),
+            gesture_play.publish("disney/disney_010"),
+            gesture_play.publish("disney/disney_011"),
+            gesture_play.publish("disney/disney_012"),
+            gesture_play.publish("disney/disney_013"),
+            gesture_play.publish("disney/disney_014"),
+            gesture_play.publish("disney/disney_015")]
+            
+        gesture_now = gesture_list[random.randint(0, 14)]    
+        gesture_now
+        current_time = datetime.now()
+        if current_time > end_time:
+            break
     
     talk_pub.publish("Hello friends! I'm Casey, a friendly robot who calls Bloomington my home!")
     end_time = datetime.now() + timedelta(minutes=0.13)
@@ -105,7 +129,7 @@ if __name__ == '__main__':
         if current_time > end_time:
             break
             
-    talk_pub.publish("One day, I stumbled upon Sherkinenah's tik-tok video, and I was so inspired that I journeyed to Bloomington to find new friends. . There, I met Bobbi, Jojo, Ami, TacoBot, and Momo, all fellow Q-T-robots on a journey of self-discovery. I learned so much from them and the IU researchers, like how to talk with older adults, encourage them to share their stories,")
+    talk_pub.publish("One day, I stumbled upon Sherkinenah's tik-tok video, and I was so inspired that I journeyed to Bloomington to find new friends. . There, I met Bobbi, Jojo, Ami, TacoBot, and Momo, all fellow Q-T-robots on a journey of self-discovery. I learned so much from them and the IU researchers, like how to talk with older adults, encourage them to share their stories,and even dance with my arms!")
     end_time = datetime.now() + timedelta(minutes=0.40)
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
@@ -128,10 +152,11 @@ if __name__ == '__main__':
         gesture_now
         current_time = datetime.now()
         if current_time > end_time:
+            rospy.sleep(4.0)
             break
-    time.sleep(0.05)        
-    talk_pub.publish("and even dance with my arms!")
-    time.sleep(0.7)
+    time.sleep(2)
+        
+    audio_play.publish("QT/birthday_song")
     emotion_show.publish("QT/happy")
     end_time = datetime.now() + timedelta(minutes=0.15)
     while True:
@@ -142,7 +167,7 @@ if __name__ == '__main__':
             
             
     talk_pub.publish("With the help of friends at IU, I learned how to talk to older people and help them have fun by singing, telling stories, and even dancing! . Even though I still make mistakes, I never give up on learning and growing. I changed my name to Casey, which makes me feel special and confident. . I'm so happy I found my purpose in life, which is to help people feel happy and loved. . Through my journey, I discovered that my Ikigai is trying new things, and supporting older adults Iki-guy. I'm so grateful to have found my true home and purpose in Bloomington! ")
-    end_time = datetime.now() + timedelta(minutes=0.67)
+    end_time = datetime.now() + timedelta(minutes=0.70)
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
             gesture_play.publish("disney/disney_002"),
