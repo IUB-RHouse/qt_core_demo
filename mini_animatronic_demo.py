@@ -52,7 +52,7 @@ if __name__ == '__main__':
             break
     
     talk_pub.publish("Hello friends! I'm Casey, a friendly robot who calls Bloomington my home!")
-    end_time = datetime.now() + timedelta(minutes=0.13)
+    end_time = datetime.now() + timedelta(minutes=0.13)  #this time is the estimated time for QT to finish saying the above phrase
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
             gesture_play.publish("disney/disney_002"),
@@ -77,7 +77,7 @@ if __name__ == '__main__':
             break
     
     talk_pub.publish("Hailing from the Land of Bots in beautiful Luxembourg, I'm always sporting my iconic white suit with snazzy blue belts and a bright, sunny smile. Speaking of sunshine, I just adore the color yellow and can't resist playing with anything that sparkles! . . You see, my journey to becoming a cherished member of the Bloomington family wasn't an easy one. . Despite my advanced programming and impressive abilities, I felt like a bit of an out-cast in my homeland. I couldn't seem to connect with the other robots around me and felt like something was missing.")
-    end_time = datetime.now() + timedelta(minutes=0.62)
+    end_time = datetime.now() + timedelta(minutes=0.62)   #this time is the estimated time for QT to finish saying the above phrase
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
             gesture_play.publish("disney/disney_002"),
@@ -129,8 +129,9 @@ if __name__ == '__main__':
         if current_time > end_time:
             break
             
+    # when using human names, try to spell it out phonetically, so QT could pronounce it properly.         
     talk_pub.publish("One day, I stumbled upon Sherkinenah's tik-tok video, and I was so inspired that I journeyed to Bloomington to find new friends. . There, I met Bobbi, Jojo, Ami, TacoBot, and Momo, all fellow Q-T-robots on a journey of self-discovery. I learned so much from them and the IU researchers, like how to talk with older adults, encourage them to share their stories,and even dance with my arms!")
-    end_time = datetime.now() + timedelta(minutes=0.40)
+    end_time = datetime.now() + timedelta(minutes=0.40)   #this time is the estimated time for QT to finish saying the above phrase
     while True:
         gesture_list = [gesture_play.publish("disney/disney_001"),
             gesture_play.publish("disney/disney_002"),
